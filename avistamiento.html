@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar avistamiento - Avistamientos de Aves</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="voluntario.html">Registrar voluntario</a>
+            <a href="avistamiento.html">Registrar avistamiento</a>
+            <a href="avistamientos.html">Avistamientos</a>
+            <a href="indicadores.html">Indicadores</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Registro de avistamiento</h2>
+
+            <p>
+                Los campos marcados con <strong>*</strong> son obligatorios.
+            </p>
+
+            <form id="formAvistamiento" novalidate>
+
+                <fieldset>
+                    <legend>Información del avistamiento</legend>
+
+                    <label for="voluntario">Voluntario *</label>
+                    <select id="voluntario" name="voluntario">
+                        <option value="">Seleccione un voluntario</option>
+                        <option value="1">María González</option>
+                        <option value="2">Juan Pérez</option>
+                        <option value="3">Camila Soto</option>
+                    </select>
+
+                    <span class="mensaje-error" id="errorVoluntario"></span>
+
+                    <label for="tipoAve">Tipo de ave *</label>
+                    <select id="tipoAve" name="tipoAve">
+                        <option value="">Seleccione un tipo</option>
+                        <option value="rapaz">Ave rapaz</option>
+                        <option value="marina">Ave marina</option>
+                        <option value="acuática">Ave acuática</option>
+                        <option value="terrestre">Ave terrestre</option>
+                        <option value="urbana">Ave urbana</option>
+                        <option value="migratoria">Ave migratoria</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <span class="mensaje-error" id="errorTipoAve"></span>
+
+                    <label for="nombreAve">Nombre del ave *</label>
+                    <input type="text" id="nombreAve" name="nombreAve"
+                           placeholder="Ej: Cóndor">
+
+                    <span class="mensaje-error" id="errorNombreAve"></span>
+
+                    <label for="lugar">Lugar del avistamiento *</label>
+                    <input type="text" id="lugar" name="lugar"
+                           placeholder="Ej: Parque Nacional Conguillío">
+
+                    <span class="mensaje-error" id="errorLugar"></span>
+
+                    <label for="fecha">Fecha del avistamiento *</label>
+                    <input type="date" id="fecha" name="fecha">
+
+                    <span class="ayuda">
+                        El avistamiento debe corresponder a los últimos 10 años.
+                    </span>
+
+                    <span class="mensaje-error" id="errorFecha"></span>
+
+                    <label for="hora">Hora del avistamiento *</label>
+                    <input type="time" id="hora" name="hora">
+
+                    <span class="mensaje-error" id="errorHora"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Evidencia</legend>
+
+                    <label for="evidencia">
+                        Fotografía o vídeo *
+                    </label>
+
+                    <input type="file"
+                           id="evidencia"
+                           name="evidencia"
+                           accept="image/*,video/*">
+
+                    <span class="ayuda">
+                        Debe adjuntar al menos una fotografía o vídeo.
+                    </span>
+
+                    <span class="mensaje-error" id="errorEvidencia"></span>
+
+                    <label for="descripcion">
+                        Descripción del avistamiento
+                    </label>
+
+                    <textarea id="descripcion"
+                              name="descripcion"
+                              rows="5"
+                              placeholder="Agregue información adicional sobre el avistamiento..."></textarea>
+                </fieldset>
+
+                <button type="submit" class="boton">
+                    Registrar avistamiento
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Prototipo desarrollado para Desarrollo de Aplicaciones Web</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+
+</body>
+</html>

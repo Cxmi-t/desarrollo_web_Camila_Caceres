@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f4;
+    color: #26352b;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #315c43;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px;
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #47795a;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+.bienvenida,
+.formulario,
+.listado,
+.indicadores {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #315c43;
+    margin-top: 0;
+}
+
+h3 {
+    color: #3f694e;
+}
+
+.acciones {
+    margin-top: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #47795a;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 10px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.boton:hover {
+    background-color: #315c43;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid #cbd8ce;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #315c43;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aebcaf;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #7fa58a;
+    border-color: #47795a;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.ayuda {
+    display: block;
+    font-size: 13px;
+    color: #66756b;
+    margin-top: 5px;
+}
+
+.mensaje-error {
+    display: block;
+    color: #b42318;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.filtros {
+    background-color: #eef4ef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.filtros label {
+    margin-top: 10px;
+}
+
+.filtros select {
+    margin-bottom: 10px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #d8e0da;
+}
+
+th {
+    background-color: #315c43;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f7f4;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.paginacion button {
+    background-color: #47795a;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.paginacion button:hover {
+    background-color: #315c43;
+}
+
+.paginacion button:disabled {
+    background-color: #aebcaf;
+    cursor: not-allowed;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.tarjeta {
+    background-color: #eef4ef;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+}
+
+.numero {
+    font-size: 32px;
+    font-weight: bold;
+    color: #315c43;
+    margin: 10px 0;
+}
+
+.grafico {
+    margin-top: 30px;
+}
+
+.barra {
+    margin: 20px 0;
+}
+
+.barra > span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.barra-fondo {
+    width: 100%;
+    height: 30px;
+    background-color: #e0e7e1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.barra-valor {
+    height: 100%;
+    background-color: #47795a;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #26352b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    main {
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+
+    .bienvenida,
+    .formulario,
+    .listado,
+    .indicadores {
+        padding: 20px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        min-width: 700px;
+    }
+}

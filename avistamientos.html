@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avistamientos - Avistamientos de Aves</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="voluntario.html">Registrar voluntario</a>
+            <a href="avistamiento.html">Registrar avistamiento</a>
+            <a href="avistamientos.html">Avistamientos</a>
+            <a href="indicadores.html">Indicadores</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="listado">
+            <h2>Avistamientos registrados</h2>
+
+            <section class="filtros">
+                <h3>Buscar y ordenar</h3>
+
+                <label for="filtroTipo">Filtrar por tipo de ave</label>
+                <select id="filtroTipo">
+                    <option value="todos">Todos los tipos</option>
+                    <option value="rapaz">Ave rapaz</option>
+                    <option value="marina">Ave marina</option>
+                    <option value="acuática">Ave acuática</option>
+                    <option value="terrestre">Ave terrestre</option>
+                    <option value="urbana">Ave urbana</option>
+                    <option value="migratoria">Ave migratoria</option>
+                </select>
+
+                <label for="ordenarPor">Ordenar por</label>
+                <select id="ordenarPor">
+                    <option value="fecha-desc">
+                        Fecha: más reciente primero
+                    </option>
+                    <option value="fecha-asc">
+                        Fecha: más antigua primero
+                    </option>
+                    <option value="lugar-asc">
+                        Lugar: A-Z
+                    </option>
+                    <option value="lugar-desc">
+                        Lugar: Z-A
+                    </option>
+                </select>
+
+                <button type="button" class="boton" id="aplicarFiltros">
+                    Aplicar filtros
+                </button>
+            </section>
+
+            <section class="tabla-contenedor">
+                <h3>Resultados</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ave</th>
+                            <th>Tipo</th>
+                            <th>Lugar</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Voluntario</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaAvistamientos">
+                    </tbody>
+                </table>
+            </section>
+
+            <nav class="paginacion" aria-label="Paginación">
+                <button type="button" id="paginaAnterior">
+                    Anterior
+                </button>
+
+                <span id="paginaActual">Página 1</span>
+
+                <button type="button" id="paginaSiguiente">
+                    Siguiente
+                </button>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <p>Prototipo desarrollado para Desarrollo de Aplicaciones Web</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+
+</body>
+</html>

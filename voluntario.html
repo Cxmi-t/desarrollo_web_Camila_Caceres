@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar voluntario - Avistamientos de Aves</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="voluntario.html">Registrar voluntario</a>
+            <a href="avistamiento.html">Registrar avistamiento</a>
+            <a href="avistamientos.html">Avistamientos</a>
+            <a href="indicadores.html">Indicadores</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Registro de voluntario</h2>
+
+            <p>
+                Los campos marcados con <strong>*</strong> son obligatorios.
+            </p>
+
+            <form id="formVoluntario" novalidate>
+
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre"
+                           placeholder="Ej: María">
+
+                    <span class="mensaje-error" id="errorNombre"></span>
+
+                    <label for="apellido">Apellido *</label>
+                    <input type="text" id="apellido" name="apellido"
+                           placeholder="Ej: González">
+
+                    <span class="mensaje-error" id="errorApellido"></span>
+
+                    <label for="rut">RUT *</label>
+                    <input type="text" id="rut" name="rut"
+                           placeholder="Ej: 12.345.678-9">
+
+                    <span class="mensaje-error" id="errorRut"></span>
+
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Ej: nombre@correo.cl">
+
+                    <span class="mensaje-error" id="errorEmail"></span>
+
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono"
+                           placeholder="Ej: +56912345678">
+
+                    <span class="mensaje-error" id="errorTelefono"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dirección postal</legend>
+
+                    <label for="region">Región *</label>
+                    <select id="region" name="region">
+                        <option value="">Seleccione una región</option>
+                        <option value="arica">Arica y Parinacota</option>
+                        <option value="tarapaca">Tarapacá</option>
+                        <option value="antofagasta">Antofagasta</option>
+                        <option value="atacama">Atacama</option>
+                        <option value="coquimbo">Coquimbo</option>
+                        <option value="valparaiso">Valparaíso</option>
+                        <option value="ohiggins">O'Higgins</option>
+                        <option value="maule">Maule</option>
+                        <option value="nuble">Ñuble</option>
+                        <option value="biobio">Biobío</option>
+                        <option value="araucania">La Araucanía</option>
+                        <option value="rios">Los Ríos</option>
+                        <option value="lagos">Los Lagos</option>
+                        <option value="aysen">Aysén</option>
+                        <option value="magallanes">Magallanes y de la Antártica Chilena</option>
+                        <option value="metropolitana">Región Metropolitana de Santiago</option>
+                    </select>
+
+                    <span class="mensaje-error" id="errorRegion"></span>
+
+                    <label for="comuna">Comuna *</label>
+                    <input type="text" id="comuna" name="comuna"
+                           placeholder="Ej: Ñuñoa">
+
+                    <span class="mensaje-error" id="errorComuna"></span>
+
+                    <label for="direccion">Dirección postal</label>
+                    <input type="text" id="direccion" name="direccion"
+                           placeholder="Ej: Av. Siempre Viva 123">
+                </fieldset>
+
+                <button type="submit" class="boton">
+                    Registrar voluntario
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Prototipo desarrollado para Desarrollo de Aplicaciones Web</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+
+</body>
+</html>
