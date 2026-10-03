@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avistamientos de Aves de Chile</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Avistamientos de Aves de Chile</h1>
+
+        <nav>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+            <a href="{{ url_for('voluntario') }}">Registrar voluntario</a>
+            <a href="{{ url_for('avistamiento') }}">Registrar avistamiento</a>
+            <a href="{{ url_for('avistamientos') }}">Avistamientos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bienvenida">
+            <h2>Registro de Avistamientos de Aves</h2>
+
+            <p>
+                Bienvenido al sistema de registro de avistamientos de aves
+                de Chile.
+            </p>
+
+            <p>
+                Esta plataforma permite a personas voluntarias registrar
+                sus avistamientos y consultar información sobre las aves
+                observadas en distintas zonas del país.
+            </p>
+
+            <section class="acciones">
+                <h3>¿Qué deseas hacer?</h3>
+
+                <a class="boton" href="{{ url_for('voluntario') }}">
+                    Registrar voluntario
+                </a>
+
+                <a class="boton" href="{{ url_for('avistamiento') }}">
+                    Registrar avistamiento
+                </a>
+
+                <a class="boton" href="{{ url_for('avistamientos') }}">
+                    Consultar avistamientos
+                </a>
+            </section>
+        </section>
+        <section class="ultimos-avistamientos">
+            <h2>Últimos avistamientos</h2>
+
+            {% if ultimos_avistamientos %}
+                {% for avistamiento in ultimos_avistamientos %}
+                    <article class="avistamiento-resumen">
+                        <h3>{{ avistamiento.ave.nombre }}</h3>
+
+                        <p>
+                            <strong>Tipo:</strong>
+                            {{ avistamiento.tipo }}
+                        </p>
+
+                        <p>
+                            <strong>Lugar:</strong>
+                            {{ avistamiento.lugar }}
+                        </p>
+
+                        <p>
+                            <strong>Fecha y hora:</strong>
+                            {{ avistamiento.fecha_hora.strftime('%d/%m/%Y %H:%M') }}
+                        </p>
+
+                        <p>
+                            <strong>Voluntario:</strong>
+                            {{ avistamiento.voluntario.nombre }}
+                            {{ avistamiento.voluntario.apellido }}
+                        </p>
+                    </article>
+                {% endfor %}
+            {% else %}
+                <p>Aún no hay avistamientos registrados.</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <p>Prototipo desarrollado para Desarrollo de Aplicaciones Web</p>
+    </footer>
+
+</body>
+</html>
